@@ -1,22 +1,15 @@
-function playScene(sceneNumber) {
-  const audioPlayer = document.getElementById('audioPlayer');
-  const currentScene = document.getElementById('currentScene');
-
-  switch (sceneNumber) {
-    case 1:
-      audioPlayer.src = 'https://files.catbox.moe/ilqb7a';
-      break;
-    case 2:
-      audioPlayer.src = 'https://files.catbox.moe/vz6f8s.mp3';
-      break;
-    case 3:
-      audioPlayer.src = 'https://files.catbox.moe/idb1zk.mp3';
-      break;
-    default:
-      console.log('Invalid scene number');
-      break;
-  }
-  currentScene.textContent = `Current Scene: ${sceneNumber}`;
-  audioPlayer.load();
-  audioPlayer.play();
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scene-Based Music Player</title>
+  <script src="https://raw.githubusercontent.com/OMGPLEASEEEEEE/Music/refs/heads/master/music.js"></script>
+</head>
+<body>
+  <audio id="audioPlayer" src="song1.mp3"></audio>
+  <button onclick="playScene(1)">Scene 1</button><br>
+  <button onclick="playScene(2)">Scene 2</button><br>
+  <button onclick="playScene(3)">Scene 3</button><br><br>
+  <p>Current Scene: <span id="currentScene"></span></p>
+</body>
+</html>
